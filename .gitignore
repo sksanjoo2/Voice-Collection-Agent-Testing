@@ -1,8 +1,17 @@
 # Python
 __pycache__/
 *.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
 .venv/
 venv/
+env/
 
 # Secrets and local configuration
 .env
@@ -11,22 +20,32 @@ venv/
 *.pem
 *.key
 
-# Downloaded model data and caches
-models/**/.cache/
-models/**/assets/
-models/**/*.safetensors
-models/**/*.bin
-models/**/*.onnx
-models/**/*.pt
-models/**/*.pth
+# Downloaded model weights and caches
+models/
+.cache/
+*.safetensors
+*.bin
+*.onnx
+*.pt
+*.pth
+*.ckpt
 
-# Generated application data
+# Generated conversations and audio
 conversations/
 conversations.jsonl
 *.wav
+*.mp3
+*.flac
+*.ogg
 
-# Editor and backup files
-.DS_Store
+# Local/backup files
 *.orig
+*.bak
 *.swp
+*~
 
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
