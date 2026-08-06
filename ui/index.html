@@ -1,0 +1,17 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Voice Collection Console</title><link rel="stylesheet" href="styles.css"></head>
+<body><main class="shell"><header><div><p class="eyebrow">LOCAL SAFETY CONSOLE</p><h1>Voice Collection Agent</h1><p class="subtitle">Choose your pipeline and test a conversation.</p></div><div class="status"><span></span><b id="statusText">Ready</b></div></header>
+<section class="config card">
+<label>LLM<select id="llm"><option value="gemini" selected>Gemini 3.5 Flash</option><option value="ollama">Ollama · Qwen</option><option value="offline">Local offline safety model</option></select></label>
+<label>Gemini API key<input id="apiKey" type="password" placeholder="Paste key for this session" autocomplete="off"></label>
+<label>Ollama endpoint<input id="ollamaEndpoint" value="http://127.0.0.1:11434" autocomplete="off"></label>
+<label>Ollama model<input id="ollamaModel" value="qwen2.5:7b" autocomplete="off"></label>
+<label>Speech to text<select id="stt"><option value="indic" selected>Indic Conformer · GPU</option><option value="text">Keyboard input</option><option value="browser">Browser speech API</option></select></label>
+<label>Text to speech<select id="tts"><option value="parler" selected>Indic Parler-TTS · GPU</option><option value="browser">Local browser voice</option><option value="silent">Text only</option></select></label>
+<label>Risk tier<select id="risk"><option value="low_risk">Low risk</option><option value="medium_risk" selected>Medium risk</option><option value="high_risk">High risk</option><option value="hardship_flagged">Hardship flagged</option></select></label>
+<label>Speech language<select id="language"><option value="hi" selected>Hindi</option><option value="ta">Tamil</option><option value="te">Telugu</option><option value="bn">Bengali</option><option value="mr">Marathi</option><option value="gu">Gujarati</option><option value="kn">Kannada</option><option value="ml">Malayalam</option><option value="pa">Punjabi</option><option value="ur">Urdu</option></select></label>
+<label>Conversation mode<select id="mode"><option value="handsfree" selected>Hands-free real time</option><option value="manual">Push to talk</option></select></label>
+</section>
+<section class="call card"><div class="call-head"><div><p class="eyebrow">CALL TRANSCRIPT</p><h2 id="callTitle">No active call</h2></div><div class="actions"><button id="start" class="primary">Start call</button><button id="end" class="danger" disabled>End call</button></div></div>
+<div id="transcript" class="transcript"><div class="empty">Start a call to begin an offline test conversation.</div></div>
+<form id="composer"><button type="button" id="mic" class="mic" disabled>Start mic</button><input id="message" placeholder="Type what the debtor says…" disabled><button class="send" disabled>Send</button></form>
+<p class="notice">Running locally with the available offline model. This UI simulates a call and does not dial a phone number.</p></section></main><script src="app.js"></script></body></html>

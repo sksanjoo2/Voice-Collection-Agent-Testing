@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Downloaded model data and caches
+models/**/.cache/
+models/**/assets/
+models/**/*.safetensors
+models/**/*.bin
+models/**/*.onnx
+models/**/*.pt
+models/**/*.pth
+
+# Generated application data
+conversations/
+conversations.jsonl
+*.wav
+
+# Editor and backup files
+.DS_Store
+*.orig
+*.swp
+
