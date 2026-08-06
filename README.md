@@ -2,12 +2,9 @@
 
 Real-time voice call agent for EMI/loan collection outreach:
 **Indic Conformer (STT) → Gemini/Ollama Qwen (LLM) → Parler-TTS (TTS)**, audio routed
-through a paired **Bluetooth** device, with a **persona + delinquency-risk
+through a paired **Mic** device, with a **persona + delinquency-risk
 guardrail harness** so you red-team compliance before any real call.
 
-See `SKILL.md` for the full skill description (this is written as a Claude
-Code skill — drop the folder into `.claude/skills/voice-collection-agent/`
-and Claude Code will pick it up).
 
 ## Quick start
 
